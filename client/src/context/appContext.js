@@ -350,6 +350,7 @@ const AppProvider = ({ children }) => {
     } catch (error) {
       if (error.response.status === 401) return;
       logoutUser();
+      console.log(error)
     }
   };
   useEffect(() => {
@@ -375,7 +376,7 @@ const AppProvider = ({ children }) => {
         showStats,
         clearFilters,
         changePage,
-        getCurrentUser,
+
       }}
     >
       {children}
