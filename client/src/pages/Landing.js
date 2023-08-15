@@ -6,10 +6,10 @@ import React from "react";
 import { useAppContext } from "../context/appContext";
 
 const Landing = () => {
-  const { user } = useAppContext();
+
   return (
     <React.Fragment>
-      {user && <Navigate to="/" />}
+ 
       <Wrapper>
         <main>
           <nav>
@@ -40,5 +40,7 @@ const Landing = () => {
     </React.Fragment>
   );
 };
+  // const { user } = useAppContext();
+     // {user && <Navigate to="/" />}
 
 export default Landing;
