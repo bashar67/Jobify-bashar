@@ -23,6 +23,7 @@ const testUser = require("../middleware/testUser");
 router.route("/register").post(apiLimiter, Register);
 router.route("/login").post(apiLimiter, Login);
 router.get("/logout", logout);
+
 router.route("/updateUser").patch(authenticateUser, testUser, updateUser);
 router.route("/getCurrentUser").get(authenticateUser, getCurrentUser);
 
